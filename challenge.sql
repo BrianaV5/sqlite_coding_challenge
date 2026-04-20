@@ -1,6 +1,6 @@
 --Tool used: VS Code with SQLite Viewer extension (Florian Klampfer)
 --Validation: Ran each query by right-clicking challenge.sql and using 
---"Run Query" to check results agaisnt the database
+--"Run Query" to check results against the database
 
 -- TASK 1: TOP 5 Customers by Total Spend
 SELECT c.first_name || ' ' || c.last_name AS customer_name, SUM(oi.quantity * oi.unit_price) AS total_spend
@@ -13,9 +13,10 @@ LIMIT 5;
 
 --TASK 2: Total Revenue by Product Category (All Orders)
 SELECT p.category, SUM(oi.quantity * oi.unit_price) AS revenue
-FROM order_items oi
+FROM orders o
+JOIN order_items oi ON oi.order_id = o.id
 JOIN products p ON p.id = oi.product_id
-GROUP BY p.category 
+GROUP BY p.category
 ORDER BY revenue DESC;
 
 --Task 3: Employees Earning Above their Department Average
