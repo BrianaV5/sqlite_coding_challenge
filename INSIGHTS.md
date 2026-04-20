@@ -7,4 +7,4 @@
 - Grocery(405.72) & Stationery(319.24) had very low revenue 
 - 5 employees across 5 different departments earn above their department average
 - Maya Bennett has the highest salary(112,000)
-- Every other city has onnly silver and bronze customers showing that only the Tampa region has gold loyalty. 
+- Every other city has only silver and bronze customers showing that only the Tampa region has gold loyalty. 
